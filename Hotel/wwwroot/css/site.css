@@ -20,3 +20,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.navbar-collapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    /*float: right;
+    font-weight: bold;  
+    /*text-align: right;*/
+    /*background-color: black;*/
+}
