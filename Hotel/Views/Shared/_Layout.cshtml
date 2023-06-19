@@ -1,52 +1,107 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Ashland"] - Hotel</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Hotel.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Staycation</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
-                        </li>
-                    </ul>a
-                </div>
+  </head>
+  <body>
+    <header id="header" class="fixed-top d-flex align-items-center">
+         <div class="container d-flex justify-content-between">
+            <div>
+                <h1><a href="index.html"><span style="color:blue">Stay</span><span style="color:rgb(0,0,20)">cation</span> </a></h1>
             </div>
-        </nav>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto " href="#hero" style="color:blue">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">Browse By</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Stories</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Agents</a></li>
+                </ul>
+                  <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+
+          </div>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <div>
+                                <h1><a href="index.html"><span style="color:blue">Stay</span><span style="color:rgb(0,0,20)">cation</span> </a></h1>
+
+                            </div>
+                            <p>
+                                We make your Holiday<br />
+                                Memorable and beautiful<br />
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>For Beginners</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">New Account</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Start Booking a Room</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Use Payments</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Explore Us</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#"> Our careers</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms and Conditions</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Connect with us</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Support@staycation.id</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">021-2208-1996</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Staycation, Jemang, Jakarta.</a></li>
+
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
         <div class="container">
-            &copy; 2023 - Hotel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="copyright">
+                &copy; Copyright <strong><span>2019</span></strong>. All rights Reserved. Staycation.
+            </div>
+            <div class="credits">
+
+                Designed by <a href="">Mighty sodiq</a>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-</body>
+ </body>
 </html>

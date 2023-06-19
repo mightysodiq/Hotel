@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Home\About.cshtml" />
+    <Content Remove="Views\Home\Privacy.cshtml" />
     <Content Remove="wwwroot\Images\banner.png" />
   </ItemGroup>
 
