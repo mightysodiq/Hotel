@@ -18,7 +18,7 @@ namespace Hotel.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult BrowseBy()
         {
             return View();
         }

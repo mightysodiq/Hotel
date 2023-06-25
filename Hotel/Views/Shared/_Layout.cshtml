@@ -22,15 +22,17 @@
     <header id="header" class="fixed-top d-flex align-items-center">
          <div class="container d-flex justify-content-between">
             <div>
-                <h1><a href="index.html"><span style="color:blue">Stay</span><span style="color:rgb(0,0,20)">cation</span> </a></h1>
+                <h1><a asp-area="" asp-controller="Home" asp-action="Index"><span style="color:blue">Stay</span><span style="color:rgb(0,0,20)">cation</span> </a></h1>
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto " href="#hero" style="color:blue">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">Browse By</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Stories</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Agents</a></li>
+                    <li><a class="nav-link scrollto " asp-area="" asp-controller="Home" asp-action="Index" style="color:blue">Home</a></li>
+                    <li><a class="nav-link scrollto" asp-area="" asp-controller="Home" asp-action="BrowseBy">Browse By</a></li>
+                    <li><a class="nav-link scrollto" asp-area="" asp-controller="Home" asp-action="Stories">Stories</a></li>
+                    <li><a class="nav-link scrollto" asp-area="" asp-controller="Home" asp-action="Agents">Agents</a></li>
+                    <li><a class="nav-link scrollto" asp-area="" asp-controller="User" asp-action="SignUp">Sign Up</a></li>
+                    <li><a class="nav-link scrollto" asp-area="" asp-controller="User" asp-action="Login">Login</a></li>
                 </ul>
                   <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
