@@ -22,6 +22,11 @@ namespace Hotel.Controllers
         {
             return View();
         }
+        public IActionResult stories()
+        {
+            return View();
+        }
+
 
         public IActionResult About() 
         {
