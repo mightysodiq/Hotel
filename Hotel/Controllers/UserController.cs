@@ -6,7 +6,7 @@ namespace Hotel.Controllers
     {
         public IActionResult SignUp()
         {
-            return View();
+            return View(); 
         }
 
         public IActionResult Login()
