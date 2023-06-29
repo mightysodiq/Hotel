@@ -16,7 +16,7 @@
             StreamWriter writer = new StreamWriter(UserFile);
 
             foreach (var user in AllUser)
-            {
+            { 
                 writer.WriteLine($"{user.Id} {user.FirstName} {user.LastName} {user.Email} {user.Password}");
             }
 
