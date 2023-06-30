@@ -3,6 +3,6 @@
     public interface IUserRepository
     {
         IEnumerable<user> AllUser { get; }
-        void MyUser();
+        void MyUser(user users);
     }
 }

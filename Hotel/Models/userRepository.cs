@@ -8,8 +8,9 @@
                 new user { Id = 1, FirstName = "Olawale", LastName = "Odeyemi", Email = "Wale@gmail.com", Password = "P1234"},
                  new user { Id = 2, FirstName = "Lucky", LastName = "Otono", Email = "Lucky@gmail.com", Password = "P1234"},
             };
+
              
-        public void MyUser()
+        public void MyUser(user users)
         {
             string UserFile = "User.txt";
 
