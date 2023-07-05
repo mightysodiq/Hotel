@@ -2,7 +2,6 @@
 {
     public interface IUserRepository
     {
-        IEnumerable<user> AllUser { get; }
-        void MyUser(user users);
+        string HashPassword(string password);
     }
 }

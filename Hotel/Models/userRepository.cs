@@ -1,28 +1,17 @@
-﻿namespace Hotel.Models
+﻿using System.Security.Cryptography;
+using System.Text;
+
+namespace Hotel.Models
 {
-    public class userRepository : IUserRepository
+    public class UserRepository : IUserRepository
     {
-        public IEnumerable<user> AllUser =>
-            new List<user>()
-            {
-                new user { Id = 1, FirstName = "Olawale", LastName = "Odeyemi", Email = "Wale@gmail.com", Password = "P1234"},
-                 new user { Id = 2, FirstName = "Lucky", LastName = "Otono", Email = "Lucky@gmail.com", Password = "P1234"},
-            };
-
-             
-        public void MyUser(user users)
+        public string HashPassword(string password)
         {
-            string UserFile = "User.txt";
-
-            StreamWriter writer = new StreamWriter(UserFile);
-
-            foreach (var user in AllUser)
-            { 
-                writer.WriteLine($"{user.Id} {user.FirstName} {user.LastName} {user.Email} {user.Password}");
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return Convert.ToBase64String(hashedBytes);
             }
-
-            writer.Close();
-
         }
     }
 }
