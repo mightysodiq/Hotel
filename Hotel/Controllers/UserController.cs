@@ -20,6 +20,7 @@ namespace Hotel.Controllers
             return View(); 
         }
 
+        
         [HttpPost]
         public IActionResult SignUp(user users)
         {
@@ -56,5 +57,66 @@ namespace Hotel.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Login(user users) 
+        {
+            string connectString = _configuration.GetConnectionString("Default");
+
+            using (SqlConnection con = new SqlConnection(connectString))
+
+            {
+
+                SqlCommand cmd = new();
+
+                cmd.CommandText = "SELECT COUNT(*) FROM UserTable WHERE Email = @Email AND Password = @Password";
+
+                cmd.Connection = con;
+
+
+
+                // Add parameters to the command
+
+                cmd.Parameters.AddWithValue("@Email", users.Email); // Provide the email value
+
+                cmd.Parameters.AddWithValue("@Password", _userRepository.HashPassword(users.Password)); // Provide the password value
+
+
+
+                con.Open();
+
+
+
+                int count = (int)cmd.ExecuteScalar();
+
+
+
+                if (count > 0)
+
+                {
+
+                    TempData["success"] = "Login successful";
+
+                    return RedirectToAction("SignUp");
+
+                }
+
+                else
+
+                {
+
+                    // Login failed
+
+                    TempData["error"] = "Incorrect Credentials!";
+
+
+
+                }
+
+            }
+            return View();
+                
+        }
+        
     }
 }
