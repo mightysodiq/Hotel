@@ -23,10 +23,10 @@ INSERT INTO dbo.PictureDataTbl (hotelImageUrl, hotelName, hotelLocation, hotelPr
 VALUES ('https://staycations.blob.core.windows.net/staycation/Tabby.svg', 'Tabby Town', 'Gunung Batu Indonesia', 'null', 'beauty backyard', 'Houses with beauty backyard', 'Popular Choice', 'true')
 
 INSERT INTO dbo.PictureDataTbl (hotelImageUrl, hotelName, hotelLocation, hotelPrice, hotelDescription, hotelGroup, hotelPopularity, IsPopular)
-VALUES ('https://staycations.blob.core.windows.net/staycation/Anggana.svg', 'Anggana', 'Bogar Indonesia', 'null', 'beauty backyard', 'Houses with beauty backyard', 'null', 'false')
+VALUES ('https://sodiq.blob.core.windows.net/hotel/anganna.svg', 'Anggana', 'Bogar Indonesia', 'null', 'beauty backyard', 'Houses with beauty backyard', 'null', 'false')
 
 INSERT INTO dbo.PictureDataTbl (hotelImageUrl, hotelName, hotelLocation, hotelPrice, hotelDescription, hotelGroup, hotelPopularity, IsPopular)
-VALUES ('https://staycations.blob.core.windows.net/staycation/Seatle.svg', 'Seatle Rain', 'Jakarta Indonesia', 'null', 'beauty backyard', 'Houses with beauty backyard', 'null', 'false')
+VALUES ('https:', 'Seatle Rain', 'Jakarta Indonesia', 'null', 'beauty backyard', 'Houses with beauty backyard', 'null', 'false')
 
 INSERT INTO dbo.PictureDataTbl (hotelImageUrl, hotelName, hotelLocation, hotelPrice, hotelDescription, hotelGroup, hotelPopularity, IsPopular)
 VALUES ('https://staycations.blob.core.windows.net/staycation/wooden.svg', 'Woonden Pit', 'Wonobo Indonesia', 'null', 'beauty backyard', 'Houses with beauty backyard', 'null', 'false')
